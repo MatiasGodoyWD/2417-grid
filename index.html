@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://renderer-v2.vercel.app/_next/image?url=https%3A%2F%2Fapi.typedream.com%2Fv0%2Fdocument%2Fpublic%2Fac4f6f0d-8160-4e58-9d18-cb5e7c880fb6_Recurso_32_png.png&w=384&q=75" />
+  <!-- Estilos Base -->
+  <link rel="stylesheet"
+    href="https://res.cloudinary.com/dcatzxqqf/raw/upload/v1659451742/coding/Dise%C3%B1oWebCDN/cdn_1_sjhqe3.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>CSS - CSS Grid</title>
+</head>
+
+<body>
+  <main class="max-width">
+    <h1>1.15 CSS Grid <img
+        src="https://renderer-v2.vercel.app/_next/image?url=https%3A%2F%2Fapi.typedream.com%2Fv0%2Fdocument%2Fpublic%2Fac4f6f0d-8160-4e58-9d18-cb5e7c880fb6_Recurso_32_png.png&w=384&q=75"
+        alt="logo" class="logo" /></h1>
+    <p>
+      En esta clase vamos a estar viendo conceptos básicos de CSS Grid
+    </p>
+    <h2>Objetivos</h2>
+    <p class="my">Conocer y utilizar: GRID</p>
+    <h2>Recursos de la clase:</h2>
+    <ul>
+      <li>
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/CSS/grid">https://developer.mozilla.org/es/docs/Web/CSS/grid</a>
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout</a>
+      </li>
+    </ul>
+    <hr class="hr" />
+    <section class="info-clase">
+
+
+      <h2>grid-template-columns</h2>
+      <p class="my">
+        Esta propiedad define el nombre y las funciones de tamaño de las
+        columnas
+      </p>
+
+      <div class="bg-secondary">
+
+
+
+
+        <div class="grid-column">
+          <div class="item"> elemento 1 </div>
+          <div class="item"> elemento 2 </div>
+        </div>
+
+
+
+
+
+
+        <p class="my">
+          Bien, podemos separar usando la propiedad de grid-gap. (Tenemos
+          tambien, gap, column-gap y row-gap)
+        </p>
+
+
+
+        <div class="grid-column gap">
+          <div class="item"> elemento 1 </div>
+          <div class="item"> elemento 2 </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      <h2>grid-template-rows</h2>
+      <p class="my">
+        Esta propiedad define el nombre y las funciones de tamaño de las
+        filas. Combinemos filas y columnas.
+      </p>
+
+      <div class="bg-secondary">
+
+
+
+        <div class="grid-row">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- fr -->
+      <h2>Unidad fr (fracción restante)</h2>
+      <p class="my">
+        En grid podemos utilizar tanto px, %,rem/em y auto para las celdas de
+        la cuadricula, o podemos usar la unidad de grid
+        <b>fr (fraction)</b> que representa una fracción de espacio restante.
+      </p>
+      <div class="bg-secondary">
+
+
+        <div class="grid-fr">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+        </div>
+
+
+
+
+
+
+
+
+        <p class="my">
+          En este caso creamos 2 columnas de 1fr y dos rows: La primera de 2fr
+          y la segunda de 1fr.
+        </p>
+      </div>
+
+      <!-- repeat -->
+      <h2>Repeat</h2>
+      <p class="my">
+        Si vamos a tener en las propiedades grid-template-columns y
+        grid-template-rows con los mismos valores, podemos usar la expresión
+        de repeat(), pasando como valor la cantidad de veces que se repiten y
+        el tamaño.
+      </p>
+
+      <div class="bg-secondary">
+
+
+
+        <div class="grid-repeat">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+          <div class="item"> Item 5 </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <!-- grid por areas -->
+      <h2>grid-template-areas</h2>
+      <p class="my">Podemos crear cuadriculas de una forma mas flexible.</p>
+
+      <div class="bg-secondary">
+
+
+
+
+        <div class="grid-areas">
+          <nav class="nav"> nav </nav>
+          <header class="header"> header </header>
+          <aside class="sidebar"> sidebar </aside>
+          <main class="content"> content </main>
+          <footer class="footer"> footer </footer>
+        </div>
+
+
+
+
+
+      </div>
+
+      <!-- Posiciones en grid -->
+      <h2>Posiciones en grid</h2>
+      <p>
+        Podemos usar distintas propiedades que nos sirven para colocar items
+        en la cuadricula. Las propiedades son <b>justify-items</b> y
+        <b>align-items</b> .
+      </p>
+      <div class="bg-secondary">
+
+
+
+        <div class="grid-j-items">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+        </div>
+
+
+
+
+
+
+      </div>
+      <p class="my">
+        También podemos usar las props de <b>justify-content</b> y
+        <b>align-content</b> para acomodar todo el contenido y no los items
+        por separados.
+      </p>
+      <div class="bg-secondary">
+
+
+        <div class="grid-j-content">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      <!-- shorthand justify/align -->
+      <h2>Shorthand justify/align</h2>
+
+      <p class="my">
+        Si necesitamos usar las 4 props anteriores, podemos usar un shorthand
+      </p>
+      <ul class="list">
+        <li>
+          👉 <b>place-content:</b>Atajo para align-content / justify-content
+        </li>
+        <li>👉 <b>place-items:</b>Atajo para align-items / justify-items</li>
+      </ul>
+      <!-- grid auto -->
+      <h2>Ajuste automático de celdas</h2>
+      <p class="my">Usemos grid-auto-flow en el siguiente ejemplo</p>
+      <div class="bg-secondary">
+
+
+
+        <div class="grid-auto">
+          <div class="item"> Item 1 </div>
+          <div class="item"> Item 2 </div>
+          <div class="item"> Item 3 </div>
+          <div class="item"> Item 4 </div>
+        </div>
+
+
+
+
+
+
+      </div>
+      <hr class="hr my">
+      <h2>Propiedades para items hijos</h2>
+      <p class="my">Hasta ahora vimos propiedades aplicadas al item contenedor (padre), veamos algunas para los items
+        hijos.</p>
+      <h2>grid-column-start/end grid-row-start/end</h2>
+      <p class="my">Tenemos una propiedad clave para posicionar elementos en una cuadricula. Podemos indicarle a grid
+        donde va a empezar o terminar una fila/columna.</p>
+      <div class="bg-secondary">
+
+
+        <div class="grid-start-end">
+          <div class="item-pos item">Item 1</div>
+          <div class="item-pos item">Item 2</div>
+          <div class="item-pos item">Item 3</div>
+          <div class="item-pos item">Item 4</div>
+          <div class="item-pos item">Item 5</div>
+          <div class="item-pos item">Item 6</div>
+        </div>
+
+
+      </div>
+      <p>Tenemos un atajo para no estar indicando en una linea el inicio y otra el final, podemos usar solo
+        <b>grid-column</b> o <b>grid-row</b>
+      </p>
+
+      <div class="bg-secondary">
+
+
+        <div class="grid-start-end">
+          <div class="item-pos item">Item 1</div>
+          <div class="item-pos item">Item 2</div>
+          <div class="item-pos item">Item 3</div>
+          <div class="item-pos item">Item 4</div>
+          <div class="item-pos item">Item 5</div>
+          <div class="item-pos item">Item 6</div>
+        </div>
+
+      </div>
+      <p class="my">Si aún queremos simplificar más lineas, podemos usar <b>grid-area</b> y pasar los valores de
+        grid-column y grid-row juntos</p>
+
+      <div class="bg-secondary">
+        <div class="grid-start-end">
+
+
+
+
+          <div class="item-pos item">Item 1</div>
+          <div class="item-pos item">Item 2</div>
+          <div class="item-pos item">Item 3</div>
+          <div class="item-pos item">Item 4</div>
+          <div class="item-pos item">Item 5</div>
+          <div class="item-pos item">Item 6</div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="my">Hecho con ❤️ en Nucba</footer>
+</body>
+
+</html>
